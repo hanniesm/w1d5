@@ -1,27 +1,33 @@
-var list = []
+var list = [2, 10, 5, 2]
 var sortedlist = []
 
-function storeList(num) {
-  list.push(num)
-  return list
-}
+// function storeList(num) {
+//   list.push(num)
+//   return list
+// }
 
 function sortList(list) {
   sortedlist = list.sort(function(a,b) {
-    a - b
+    return a - b
   });
-  return list
+  return sortedlist
 }
 
-// storeList(9);
-// storeList(10);
-
-// sortList(list);
-// console.log(sortedlist);
+// console.log(sortList(list));
 
 
 module.exports = {
-  storeList: storeList
-  sortedlist: sortedlist
+  storeList: function(num) {
+      list.push(num)
+  return list;
+  },
+
+  showList: function() {
+    return list;
+  },
+
+  sortedlist: function() {
+    return sortList(list)
+  }
 };
 
