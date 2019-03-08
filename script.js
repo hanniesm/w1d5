@@ -1,7 +1,5 @@
 var myModule = require("./customSorting")
 
-console.log(myModule.showList());
-
 myModule.storeList(9);
 myModule.storeList(10);
 myModule.storeList(1);
